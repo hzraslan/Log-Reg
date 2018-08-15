@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   <title>Document</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script type ="text/javascript" src="/socket.io/socket.io.js"></script> -->
+   <script type ="text/javascript">
+       $(document).ready(function (){
+
+
+        });
+   </script>
+</head>
+<body>
+    
+    <form action="/sessions/clear" method="POST">
+        <button>Logout</button><br><br>
+    </form>
+    <form action="/dashboard" method="GET">
+        <button>Home</button><br><br>
+    </form>
+       
+<!--     
+    <% for (var user1 of users) {%>
+        <% for(var comment of user1.comments) {%>
+        <h4><a href="/user/<%= user1.id %>/comment/<%= comment.id%>"><%= comment.content %></a></h4>
+        <% if(user1.id === user.id){ %>
+            <a href="/users/<%= user1.id %>/secret/<%= comment.id%>">Delete</a>
+        <% } %>
+    <% } %>
+    <% } %> -->
+    <h3><%= secret.content %></h3>
+    <form id="form2" action="/users/<%= user.id %>/secret/<%= secret.id %>/new_feedback" method="POST">
+        <label for="content">Secret:</label><br>
+        <textarea name="content" id="" cols="50" rows="3"></textarea><br>
+        <input  type="submit" value="Share">
+    </form>
+    <% for(var feedback of secret.feedbacks) {%>
+        <h6><%= feedback.content %></h6>
+    <% } %>
+</body>
+</html>

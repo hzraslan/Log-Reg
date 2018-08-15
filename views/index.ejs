@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   <title>Document</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script type ="text/javascript" src="/socket.io/socket.io.js"></script> -->
+   <script type ="text/javascript">
+       $(document).ready(function (){
+
+
+        });
+   </script>
+</head>
+<body>
+       
+    <div class="content">
+        <table>
+            <th>login</th>
+            <form method='post' action='/sessions'>
+                <tr>
+                    <td><input type='text' name='email' placeholder="email"></td>
+                </tr>
+                <tr>
+                    <td><input type='password' name='password' placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="login"></td>
+                </tr>
+            </form>
+        </table>
+        <table>
+            <th>Register</th>
+            <form method='post' action='/users'>
+                <tr>
+                    <td><input type='text' name='first_name' placeholder="first name"></td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='last_name' placeholder="last name"></td>
+                </tr>
+                <tr>
+                    <td><input type='email' name='email' placeholder="email"></td>
+                </tr>
+                <tr>
+                    <td><input type='date' name='birthday' placeholder="birthday"></td>
+                </tr>
+                <tr>
+                    <td><input type='password' name='password' placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td><input type='password' name='password_confirmation' placeholder="Confirm password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="register"></td>
+                </tr>   
+            </form>
+        </table>
+        
+    </div>
+    
+</body>
+</html>
